@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayadeep - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(7, 7, 43);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        main hr{
+            border: 0;
+            background:rgb(116 122 201);
+            height: 1.2px;
+            margin: 25px 85px;;
+        }
+
+        nav ul li a:hover{
+            color: rgb(160, 160, 241);
+            font-size: 1.05rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+        .firstSection > div{
+            width: 30%;
+            margin: 40px;
+        }
+        .leftSection{
+            
+            font-size: 2.3rem;
+            
+        }
+        .leftSection .resume-button{
+            padding: 5px;
+            background: #0f124e;
+            border: 1px solid white;
+            color: white;
+            border-radius: 6px;
+            font-size: 10px;
+            cursor: pointer;      
+        }
+        .leftSection .gitHub-button{
+            padding: 5px;
+            background: #0f124e;
+            border: 1px solid white;
+            color: white;
+            border-radius: 6px;
+            font-size: 10px;
+            cursor: pointer;      
+        }
+        .rightSection img{
+            width: 65%;
+            margin: 9px 0;
+            
+        }
+        .purple{
+            color: rgb(170, 107, 228);
+        }
+        .text-gray{
+            color: gray;
+        }
+        #element{
+            color: rgb(170, 107, 228);
+        }
+        .secondSection{
+           max-width: 80vw;
+           margin: auto;
+        }
+        .secondSection h1{
+            font-size: 1 rem;
+        }
+
+        /* Enducational Journey style */
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 28px auto;
+        }
+        .container{
+            padding: 10px 25px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+        }
+        @keyframes movedown{
+            0%{
+                opacity: 1;
+                transform: translateY(-30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .container:nth-child(1){
+            animation-delay: 0s;
+        }
+        .container:nth-child(2){
+            animation-delay: 2s;
+        }
+        .container:nth-child(3){
+            animation-delay: 4s;
+        }
+        .container:nth-child(4){
+            animation-delay: 6s;
+        }
+        .text-box{
+            padding: 20px 30px;
+            background-color: #fff;
+            color: black;
+            position: relative;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+        .left-container{
+            left: -50px;
+        }
+        .right-container{
+            left:50%;
+        }
+        .container img{
+            position: absolute;
+            width: 40px;
+            border-radius: 50%;
+            right: -20px;
+            top: 23px;
+            z-index: 10;
+        }
+        .right-container img{
+            left: -20px;
+        }
+        .timeline::after{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background-color: #fff;
+            top: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1;
+            animation: moveline 6s linear forwards;
+        }
+        @keyframes moveline {
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        }
+
+        .text-box h2{
+            font-weight: 600;
+        }
+        .text-box small{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .left-container-arrow{
+            height: 0;
+            width: 5px;
+            position: absolute;
+            top: 15px;
+            z-index: 1;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 15px solid #fff;
+            right: -11px;
+        }
+        .right-container-arrow{
+            height: 0;
+            width: 5px;
+            position: absolute;
+            top: 15px;
+            z-index: 1;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid #fff;
+            left: -11px;
+        }
+        /* footer section style */
+        footer{
+            background-color: #131840;
+           
+        }
+        .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+            
+        }
+        .footer ul{ 
+            list-style: none;
+            cursor: pointer;
+        }
+        .footer img{
+            width: 30px; /* Set the desired width */
+            height: 30px; /* Set the desired height */
+            margin-right: 10px; 
+            vertical-align: middle; 
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Jayadeep's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="/"> Contact Me </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi, My name is <span class="purple"> Jayadeep </span>
+                <div>I am a passionate </div>
+                <span id="element"></span>
+                <div class="buttions">
+                    <button class="resume-button" onclick="window.location.href='https://drive.google.com/file/d/1p_Ve_pUiPDUPtUmhGktsLzSYPPGvbhPq/view?usp=sharing'">View Resume</button>
+                    <button class="gitHub-button" onclick="window.location.href='https://github.com/Jaydeep208'">Visit GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="developer.png" alt="" class="src">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">My Educational Journey</span>
+            <h1>Education Background</h1>
+            <div class="timeline">
+                <div class="container left-container">
+                    <img src="SecondarySchool.png">
+                    <div class="text-box">
+                       <h2>Secondary School</h2> 
+                       <small>(2018)</small>
+                       <p> <b>School Name: Venkateswar English Medium School, CBSE</b> 
+                        <ul>
+                            <li>316 state rank and 812 international rank in National Mathematics Olympiad, 2013</li>
+                            <li>166 state rank in National Science Olympiad, 2013</li>
+                            <li>Secured 73 state rank in International Informatics Olympiad, 2014</li>
+                            <li>Secured 156 state rank in International Informatics Olympiad, 2015</li>
+                        </ul>
+                       </p>
+                       <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="container right-container">
+                    <img src="HigherSecondarySchool.png">
+                    <div class="text-box">
+                       <h2>Higher Secondary School</h2> 
+                       <small>(2018-2020)</small>
+                       <p> <b>School Name: ODM Public School, CBSE</b> 
+                        <ul>
+                            <li>316 state rank and 812 international rank in National Mathematics Olympiad, 2013</li>
+                            <li>166 state rank in National Science Olympiad, 2013</li>
+                            <li>Secured 73 state rank in International Informatics Olympiad, 2014</li>
+                            <li>Secured 156 state rank in International Informatics Olympiad, 2015</li>
+                        </ul>
+                       </p>
+                       <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="container left-container">
+                    <img src="Degree.png">
+                    <div class="text-box">
+                       <h2>Bachelor of Technology</h2> 
+                       <small>(2020-2024)</small>
+                       <p> <b>University Name: Kalinga Institute of Industrial Technology (KIIT), DU</b> 
+                        <ul>
+                            <li>Problem Solving (Basic), 2021</li>
+                            <li>Started Web Development, 2022</li>
+                            <li>Problem Solving (Intermediate), 2022</li>
+                            <li>Started Front-End Development</li>
+                            <li>React (Basic), 2023</li>
+                            <li>Node.JS (Intermediate), 2023</li>
+                            <li>Achieved Level 5 in Code Studio, 2023</li>
+                            <li>Achieved AIR rank 82 in Code Storm Contest By Coding Ninjas, 2023</li>
+                        </ul>
+                       </p>
+                       <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="container right-container">
+                    <img src="project.png">
+                    <div class="text-box">
+                       <h2>Projects</h2> 
+                       <small>(2020-2024)</small>
+                       <p> <b>University Name: Kalinga Institute of Industrial Technology (KIIT), DU</b> 
+                        <ul>
+                            <li><b>Project 1:</b> Web Based Calculator</li> 
+                            <li><b>Project 2:</b> Web Based Music Player</li>
+                            <li><b>Project 3:</b> Interactive Weather Forecasting App</li>
+                            <li><b>Project 4:</b> Portfolio Website</li>
+                        </ul>
+                       </p>
+                       <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Jayadeep's Developer </h3>
+            </div>
+            <div class="footer-second"></div>
+            <ul>
+                <li onclick="window.location.href='https://www.linkedin.com/in/jaydeep-mohanty-1020901ba/'"> 
+                    <img src="linkedin-logo.png" >Linkdin</li>
+                <li onclick="window.location.href='https://leetcode.com/jipu208/'">
+                    <img src="leetcode.png" >LeetCode </li>
+                <li onclick="window.location.href='https://www.codingninjas.com/studio/profile/c9411b1f-ce36-4f6a-8625-71297aa4e2ae'">
+                    <img src="codestudio.svg" >Code Studio</li>
+                <li onclick="window.location.href='https://www.hackerrank.com/jipu208'">
+                    <img src="HackerRank.png" >HackerRank</li>
+            </ul>
+            <div class="footer-third"></div>
+            <ul>
+                <li> <img src="home.png" >Home</li>
+                <li> <img src="about.png" > About</li>
+                <li> <img src="contactme.png" >Contact Me</li>
+            </ul>
+            <!-- <div class="footer-fourth"></div> -->
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer','Fitness Enthusiast', 'Problem Solver' ],
+      typeSpeed: 50,
+    });
+  </script>
+
+</body>
+</html>
